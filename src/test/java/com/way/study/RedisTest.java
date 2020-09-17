@@ -1,6 +1,6 @@
 package com.way.study;
 
-import com.way.study.utils.RedisUtil;
+import com.way.study.redis.utils.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

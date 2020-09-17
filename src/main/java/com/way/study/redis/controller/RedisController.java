@@ -1,4 +1,4 @@
-package com.way.study.controller;
+package com.way.study.redis.controller;
 
 /**
  * @Author: wuaoya
