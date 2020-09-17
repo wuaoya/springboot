@@ -1,0 +1,51 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.way.study'
+//version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+        url = 'http://repo.inspur.com/artifactory/ecbu-gradle-release-local'
+
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
+    compile('org.projectlombok:lombok:1.18.2')
+    runtime('mysql:mysql-connector-java')
+    compile('mysql:mysql-connector-java')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('com.alibaba:fastjson:1.2.5')
+    compile('com.github.pagehelper:pagehelper:5.1.2')
+
+
+}
